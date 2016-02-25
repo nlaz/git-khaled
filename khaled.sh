@@ -6,9 +6,10 @@ FILE_NAME="khaled.txt"
 FILE="${FILE_PATH}/${FILE_NAME}"
 
 NUM=$(wc -l < ${FILE})
+MSG=$(echo ${1} | tr "[:lower:]" "[:upper:]")
 
 # generate random number in range 0-NUM
 let X="${RANDOM} % ${NUM} + 1"
 # extract X-th line
-output=$(sed -n ${X}p ${FILE} | sed -e "s/{1}/${1}/g" | tr "[:lower:]" "[:upper:]")
-git commit -m "${output}"
+OUTPUT=$(sed -n ${X}p ${FILE} | sed -e "s/{1}/${MSG}/g")
+git commit -m "${OUTPUT}"
