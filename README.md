@@ -7,7 +7,7 @@ Great commit messages are major key :key:.
 ### Instructions
  Clone this repo
 ```
-https://github.com/nlaz/git-khaled.git
+$ git clone https://github.com/nlaz/git-khaled.git
 ```
 Add the `khaled` alias to `~/.gitconfig
 ```
