@@ -36,7 +36,10 @@ do
 
     -a|--all);;
 
-    -q|--quotes);;
+    -q|--quotes)
+      cat khaled.txt
+      exit 0
+      ;;
 
     *)
       if [ $# -gt 1 ]; then
