@@ -49,8 +49,7 @@ do
   shift 1
 done
 
-# generate random number in range 0-NUM
 let X="${RANDOM} % ${NUM} + 1"
-OUTPUT=$(sed -n ${X}p ${FILE} | sed -e "s/{1}/${MSG}/g")
+OUTPUT=$(sed -n ${X}p ${FILE} | sed -e "s/<MESSAGE>/${MSG}/g")
 
 git commit -m "${OUTPUT}"
