@@ -14,9 +14,9 @@ usage()
   (echo "git-khaled - Record commits to your repository with DJ Khaled."
    echo "USAGE: git khaled [options] <msg>"
    echo "OPTIONS:"
-   echo "  --help                       prints this message"
-   echo "  -a, --all                    automatically stages files that have been modified and deleted"
-   echo "  -q, --quotes                 outputs all possible patterns") 1>&2
+   echo "  --help             prints this message"
+   echo "  -a, --all          automatically stages files that have been modified and deleted"
+   echo "  -q, --quotes       outputs all possible patterns") 1>&2
 }
 
 if [ $# -le 0 ]; then
@@ -34,7 +34,9 @@ do
       exit 0
       ;;
 
-    -a|--all);;
+    -a|--all)
+      git add -u
+      ;;
 
     -q|--quotes)
       cat khaled.txt
