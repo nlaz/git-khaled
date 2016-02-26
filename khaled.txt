@@ -1,5 +1,5 @@
 THEY DON'T WANT YOU TO {1}
-:cat: {1}. LION! :cat:
+{1}. :cat: LION! :cat:
 THE :key: TO SUCCESS IS TO {1}
 THE :key: TO MORE SUCCESS IS TO {1}
 THE :key: IS TO {1}
@@ -12,3 +12,4 @@ BLESS UP. EGG WHITES, TURKEY BACON, {1}, WATER :pray:.
 {1}. DON'T EVER PLAY YOURSELF.
 {1}. COCOA BUTTER. MAJOR KEY :key:.
 MORE WINS. MORE {1}. BIG TALK ALERT :pray:.
+{1} :pray::pray::pray:
