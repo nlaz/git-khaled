@@ -2,6 +2,8 @@
 
 Great commit messages are major key :key:. 
 
+![Example](https://github.com/nlaz/git-khaled/blob/master/example.png)
+
 ## Instructions
  Clone this repo
 ```
