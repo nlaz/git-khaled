@@ -1,11 +1,10 @@
 #!/bin/bash
 
-FILE_PATH="`dirname \"$0\"`"
+file_path="`dirname \"$0\"`"
+file_name="khaled.txt"
 
-FILE_NAME="khaled.txt"
-FILE="${FILE_PATH}/${FILE_NAME}"
-
-NUM=$(wc -l < ${FILE})
+file="${file_path}/${file_name}"
+file_line_count=$(wc -l < ${file})
 
 
 usage()
@@ -48,13 +47,13 @@ do
         usage
         exit 1
       fi
-      MSG=$(echo ${1} | tr "[:lower:]" "[:upper:]")
+      message=$(echo ${1} | tr "[:lower:]" "[:upper:]")
       ;;
   esac
   shift 1
 done
 
-let X="${RANDOM} % ${NUM} + 1"
-OUTPUT=$(sed -n ${X}p ${FILE} | sed -e "s/<MESSAGE>/${MSG}/g")
+let X="${RANDOM} % ${file_line_count} + 1"
+output=$(sed -n ${X}p ${file} | sed -e "s/<MESSAGE>/${message}/g")
 
-git commit -m "${OUTPUT}"
+git commit -m "${output}"
