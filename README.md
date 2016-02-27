@@ -1,4 +1,4 @@
-# ![DJ KHALED](https://github.com/nlaz/git-khaled/blob/master/assets/logo.png) git-khaled
+# ![DJ KHALED](https://github.com/nlaz/git-khaled/blob/master/assets/khaled.png) git-khaled
 
 Great commit messages are major key :key:. 
 
