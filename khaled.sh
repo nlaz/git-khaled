@@ -16,6 +16,7 @@ usage()
    echo "  --help             prints this message"
    echo "  -a, --all          automatically stages files that have been modified and deleted"
    echo "  -q, --quotes       outputs all possible patterns"
+   echo "  --one              another one"
    echo "  --lion             set commit with lion message") 1>&2
 }
 
@@ -49,6 +50,14 @@ do
         exit 1
       fi
       message=":cat: LIIIIION!! :cat:"
+      ;;
+
+    --one)
+      if [ $# -gt 1 ]; then
+        usage
+        exit 1
+      fi
+      message="ANOTHER ONE."
       ;;
 
     *)
