@@ -15,7 +15,8 @@ usage()
    echo "OPTIONS:"
    echo "  --help             prints this message"
    echo "  -a, --all          automatically stages files that have been modified and deleted"
-   echo "  -q, --quotes       outputs all possible patterns") 1>&2
+   echo "  -q, --quotes       outputs all possible patterns"
+   echo "  --lion             set commit with lion message") 1>&2
 }
 
 if [ $# -le 0 ]; then
@@ -42,7 +43,7 @@ do
       exit 0
       ;;
 
-    -l|--lion)
+    --lion)
       if [ $# -gt 1 ]; then
         usage
         exit 1
