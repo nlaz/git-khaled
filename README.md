@@ -27,4 +27,4 @@ $ git khaled [options] <MESSAGE>
  - `--lion` - Sets commit message to ':cat: LIIIIION!! :cat:'
 
 ### Suggestions
-Reach out to me at [nlaz](https://github.com/nlaz) or [@nikolazaris](https://twitter.com/nikolazaris) with any suggestions, ideas, or complaints.
+Suggestions are welcome! Reach out to me at [@nikolazaris](https://twitter.com/nikolazaris) with any suggestions, ideas, or complaints.
