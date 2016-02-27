@@ -42,18 +42,27 @@ do
       exit 0
       ;;
 
+    -l|--lion)
+      if [ $# -gt 1 ]; then
+        usage
+        exit 1
+      fi
+      message=":cat: LIIIIION!! :cat:"
+      ;;
+
     *)
       if [ $# -gt 1 ]; then
         usage
         exit 1
       fi
+      file_line_count=$(wc -l < ${file})
+      let X="${RANDOM} % ${file_line_count} + 1"
+
       message=$(echo ${1} | tr "[:lower:]" "[:upper:]")
+      message=$(sed -n ${X}p ${file} | sed -e "s/<MESSAGE>/${message}/g")
       ;;
   esac
   shift 1
 done
 
-let X="${RANDOM} % ${file_line_count} + 1"
-output=$(sed -n ${X}p ${file} | sed -e "s/<MESSAGE>/${message}/g")
-
-git commit -m "${output}"
+git commit -m "${message}"
