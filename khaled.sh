@@ -14,10 +14,11 @@ usage()
    echo "USAGE: git khaled [options] <msg>"
    echo "OPTIONS:"
    echo "  --help             prints this message"
+   echo "  --one              commit another one."
+   echo "  --lion             set commit with lion message"
    echo "  -a, --all          automatically stages files that have been modified and deleted"
    echo "  -q, --quotes       outputs all possible patterns"
-   echo "  --one              another one"
-   echo "  --lion             set commit with lion message") 1>&2
+   echo "  -k, --key <msg>    your message is the key to success") 1>&2
 }
 
 if [ $# -le 0 ]; then
@@ -58,6 +59,16 @@ do
         exit 1
       fi
       message="ANOTHER ONE."
+      ;;
+
+    -k|--key)
+      if [ $# -gt 2 ] || [ $# -le 1 ]; then
+        usage
+        exit 1
+      fi
+      message=$(echo ${2} | tr "[:lower:]" "[:upper:]")
+      message="THE :key: TO SUCCESS IS TO ${message}"
+      shift 1
       ;;
 
     *)
